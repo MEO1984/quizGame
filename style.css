@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* header */
+.header {
+
+    height: 100px;
+    
+    
+
+}
+
+.highDiv {
+
+    display: inline-block;
+    margin: 25px 0 0 10px;
+}
+
+.timerDiv {
+    float: right;
+
+    margin: 25px 10px 0 0;
+}
+/* launch page */
+.mainDiv {
+    text-align: center;
+    padding: 25px 0;
+}
