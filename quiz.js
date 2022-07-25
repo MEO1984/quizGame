@@ -9,9 +9,10 @@ let button2 = document.getElementById("button2");
 let button3 = document.getElementById("button3");
 let button4 = document.getElementById("button4");
 let gameOver = document.getElementById("gameOver");
-let message = document.getElementById("message")
-let initials = document.getElementById("initials")
+let message = document.getElementById("message");
+let initials = document.getElementById("initials");
 let timeLeft;
+let questionIndex = 0;
 let score = 0;
 
 
@@ -29,13 +30,12 @@ function startGame(){
 }
 
 function timer(){
-    clearInterval(timeInterval)
     timeLeft = questions.length * 10;
     var timeInterval = setInterval(function () {
         timeSpan.textContent = ("Time: ") + timeLeft;
         timeLeft--;
 
-        if (timeLeft < 0) {
+        if (timeLeft < 0 || questionIndex > questions.length -1 ) {
             timeSpan.textContent = "TIMES UP!";
             clearInterval(timeInterval);
             gameEnd();
@@ -44,7 +44,7 @@ function timer(){
 },1000)
 }
 
-let questionIndex = 0;
+
 function displayQues(){
     if(questionIndex < questions.length){
     questionSpan.textContent = questions[questionIndex].title;
@@ -87,7 +87,9 @@ function answerQuestion(event){
 function gameEnd(){
     gameDiv.style.display = 'none';
     gameOver.removeAttribute("style");
-    message.innerText = "Your score is: " + score
+    message.innerText = "Your score is: " + score;
+
+    
 }
 
 function addToLocSto(){
