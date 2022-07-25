@@ -20,6 +20,11 @@
     margin: 25px 0 0 10px;
 }
 
+.highScore {
+    display: inline-block;
+    margin: 25px 0 0 10px;
+    font-size: 32px;
+}
 
 .timerDiv {
     float: right;
@@ -34,7 +39,7 @@
 
 button {
     border-radius: 5%;
-    padding: 2px 5px;
+    padding: 4px 8px;
     border: none;
     margin: 5px;
     background-color: #C4D7E0;

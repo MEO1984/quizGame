@@ -11,7 +11,8 @@ let button4 = document.getElementById("button4");
 let gameOver = document.getElementById("gameOver");
 let message = document.getElementById("message");
 let initials = document.getElementById("initials");
-let timeLeft;
+let highScoreDiv = document.getElementById("highScoreDiv")
+let highDiv = document.getElementById('highDiv')
 let questionIndex = 0;
 let score = 0;
 
@@ -93,13 +94,21 @@ function gameEnd(){
 }
 
 function addToLocSto(){
-    localStorage.setItem(initials.value, score)
+    localStorage.setItem("High Score", initials.value + "- " + score)
 }
 
 function displayHS(){
-    document.createElement
+    let highScore = localStorage.getItem("High Score");
+    console.log(highScore);
+    highDiv.style.display = "none"
+    highScoreDiv.removeAttribute('style')
+    highScoreDiv.textContent = highScore
 }
 
+function hideHS(){
+    highDiv.removeAttribute("style");
+    highScoreDiv.style.display = 'none'
+}
 
 
 

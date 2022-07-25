@@ -13,8 +13,11 @@
 
 <body>
     <header class="header">
-        <div class="highDiv">
-            <button class="highDivBut" id="highDivBut" onclick="displayHS()">High Scores</button>
+        <div class="highDiv" id="highDiv">
+            <button class="highDivBut" id="highDivBut" onmouseover="displayHS()" onmouseout="hideHS()">High Scores</button>
+        </div>
+        <div class="highScore" id="highScoreDiv" style="display:none">
+            <!-- <h2 id="highScoreSpan"></h2> -->
         </div>
 
         <div class="timerDiv">
@@ -58,6 +61,7 @@
             <button onclick="addToLocSto()">Add</button>
             
         </div>
+
 
     </div>
 <script src="./questions.js"></script>
