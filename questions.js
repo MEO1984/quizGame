@@ -16,7 +16,7 @@ var questions = [
     },
     {
       title: "Where is the correct place to inset a Javascript? ",
-      choices: ["the body section", "the head section", "either section is correct"],
+      choices: ["the body section", "the head section", "either section is correct", "the footer section"],
       answer: "either section is correct"
     },
     {
@@ -25,3 +25,4 @@ var questions = [
       answer: "function myFunction()"
     },
   ];
+

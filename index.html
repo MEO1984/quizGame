@@ -11,10 +11,11 @@
 <body>
     <header class="header">
         <div class="highDiv">
-            <button class="highDivBut">High Scores</button>
+            <button class="highDivBut" id="highDivBut" onclick="displayHS()">High Scores</button>
         </div>
+
         <div class="timerDiv">
-            <span class="timeSpan">Time Left</span>
+            <span class="timeSpan" id="timeSpan">Time: 0</span>
         </div>
     </header>
 
@@ -23,20 +24,39 @@
             <h1>Dev Quiz</h1>
             <p>So here are the rules: </p>
             <br>
-            <p>You will recieve 10 seconds per question.  Correct answers are 10 points, wrong answers lose 5 points. Good luck!</p>
+            <p>You will recieve 10 seconds per question.  Correct answers are 10 points, wrong answers lose 5 points and 5 seconds off the timer. Good luck!</p>
             <button class="startBut" onclick="startGame()">Start</button>
 
         </div>
         <div class="gameDiv" id="gameDiv"style="display:none">
-            <span class="questionSpan">Question goes here</span>
+            <span id="questionSpan">Question goes here</span>
             <div class="buttonDiv">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
+                <div class="answers">
+                    <button id="button1">1</button>
+                </div>
+                <div class="answers">
+                    <button id="button2">2</button>
+                </div>
+                <div class="answers">
+                    <button id="button3">3</button>
+                </div>
+                <div class="answers">
+                    <button id="button4">4</button>
+                </div>
+                
+
             </div>
         </div>
+
+        <div class="gameOver" id="gameOver" style="display:none">
+            <h2 class="message" id="message">score div</h2>
+            <input type="text" placeholder="Add initials?" id="initials">
+            <button onclick="addToLocSto()">Add</button>
+            
+        </div>
+
     </div>
+<script src="./questions.js"></script>
 <script src="./quiz.js"></script>
 </body>
 
